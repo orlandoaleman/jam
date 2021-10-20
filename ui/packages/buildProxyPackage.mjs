@@ -107,7 +107,7 @@ async function getPackageJson(dir) {
 
 function checkDependencies(declared, actual) {
   for (let x of actual) {
-    x = s.split("/")[0];
+    x = x.split("/")[0];
     if (!declared.has(x)) {
       throw Error('Missing dependency: ' + x);
     }
